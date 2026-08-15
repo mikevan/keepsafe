@@ -1,0 +1,99 @@
+{
+  "name": "keepsafe",
+  "displayName": "KeepSafe",
+  "description": "Local checkpoints and rapid rollback for AI-generated code mistakes.",
+  "icon": "media/OwlLogo_small.png",
+  "version": "0.1.1",
+  "publisher": "KeepSafe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikevan/keepsafe.git"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:keepsafe.commandLauncher",
+    "onCommand:keepsafe.openCommandCenter",
+    "onCommand:keepsafe.quickCheckpoint",
+    "onCommand:keepsafe.restoreLatestCheckpoint",
+    "onCommand:keepsafe.createCheckpoint",
+    "onCommand:keepsafe.listCheckpoints",
+    "onCommand:keepsafe.restoreCheckpoint",
+    "onCommand:keepsafe.diffCheckpoints",
+    "onCommand:keepsafe.rebuild",
+    "onCommand:keepsafe.ignoreAdd"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "keepsafeView",
+          "title": "KeepSafe",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "keepsafeView": [
+        {
+          "id": "keepsafe.commandLauncher",
+          "name": "Actions"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "keepsafe.quickCheckpoint",
+        "title": "KeepSafe: Quick Checkpoint"
+      },
+      {
+        "command": "keepsafe.openCommandCenter",
+        "title": "KeepSafe: Open Command Center"
+      },
+      {
+        "command": "keepsafe.restoreLatestCheckpoint",
+        "title": "KeepSafe: Restore Latest Checkpoint"
+      },
+      {
+        "command": "keepsafe.createCheckpoint",
+        "title": "KeepSafe: Create Checkpoint"
+      },
+      {
+        "command": "keepsafe.listCheckpoints",
+        "title": "KeepSafe: List Checkpoints"
+      },
+      {
+        "command": "keepsafe.restoreCheckpoint",
+        "title": "KeepSafe: Restore Checkpoint"
+      },
+      {
+        "command": "keepsafe.diffCheckpoints",
+        "title": "KeepSafe: Diff Checkpoints"
+      },
+      {
+        "command": "keepsafe.rebuild",
+        "title": "KeepSafe: Rebuild Metadata"
+      },
+      {
+        "command": "keepsafe.ignoreAdd",
+        "title": "KeepSafe: Add Ignore Pattern"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx @vscode/vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.4"
+  }
+}
