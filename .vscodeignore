@@ -1,6 +1,0 @@
-**/*.ts
-**/tsconfig.json
-**/.eslintrc.json
-**/.vscode/**
-**/.vscode-test/**
-src/**
