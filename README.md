@@ -1,6 +1,6 @@
 # KeepSafe
 
-## Your AI coding agent doesn't have an Undo button. Now it does. and it is cool!
+## CTRL-Z for your entire project
 
 <p align="Left">
   <img src="media/KeepSafeDemo.gif" alt="KeepSafe Demo" width="full">
